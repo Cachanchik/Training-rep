@@ -1,0 +1,10 @@
+<h2>Hi, it's my first page. Everyone get in here!</h2>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+		<li><h3><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></h3></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
